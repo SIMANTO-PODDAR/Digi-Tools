@@ -1,0 +1,52 @@
+import { use } from 'react';
+const Cards = ({ fetchPromise }) => {
+    const cards = use(fetchPromise);
+
+    return (
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 mx-auto'>
+            {
+                cards.map((card, ind) => < Card key={ind} card={card} />)
+            }
+
+        </div>
+    );
+};
+
+
+const Card = ({ card }) => {
+    return (
+        <div className="card w-96 bg-base-100 shadow-sm mt-3">
+            <div className="card-body">
+                <div className='flex justify-between'>
+                    <div className='p-2 bg-amber-100 rounded-full'>
+                        <img src={card.icon} alt={card.tag} />
+                    </div>
+                    <span className="badge badge-xs badge-warning">{card.tag}</span>
+                </div>
+
+                <div className="flex justify-between">
+                    <h2 className="text-3xl font-bold">{card.name}</h2>
+                </div>
+                <p>{card.description}</p>
+                <span className="text-xl">$ {card.price} <span className='text-gray-500'>/{card.period}</span></span>
+
+                <ul className="mt-6 flex flex-col gap-2 text-xs">
+                    {
+                        card.features.map((feature, ind) =>
+                            <li key={ind}>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                                <span>{feature}</span>
+                            </li>)
+                    }
+
+                </ul>
+
+                <div className="mt-6">
+                    <button className={`btn bg-amber-100 rounded-full w-full font-bold ${true ? 'bg-linear-to-r from-purple-900 to-purple-600 text-white' : ''}`}>Buy Now</button>
+                </div>
+            </div>
+        </div>
+    )
+
+}
+export default Cards;
