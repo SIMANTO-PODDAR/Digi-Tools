@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaRegDotCircle } from 'react-icons/fa';
 import BannerImg from '../../Images/banner.png'
 import { CiPlay1 } from 'react-icons/ci';
