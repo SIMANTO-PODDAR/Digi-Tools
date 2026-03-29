@@ -1,11 +1,12 @@
 import { use } from 'react';
-const Cards = ({ fetchPromise }) => {
+const Cards = ({ fetchPromise, tab, handleCartItems }) => {
     const cards = use(fetchPromise);
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 mx-auto'>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 mx-auto 
+        ${tab ? '' : 'hidden'} `}>
             {
-                cards.map((card, ind) => < Card key={ind} card={card} />)
+                cards.map((card, ind) => < Card key={ind} card={card} handleCartItems={handleCartItems} />)
             }
 
         </div>
@@ -13,7 +14,7 @@ const Cards = ({ fetchPromise }) => {
 };
 
 
-const Card = ({ card }) => {
+const Card = ({ card, handleCartItems }) => {
     return (
         <div className="card w-96 bg-base-100 shadow-sm mt-3">
             <div className="card-body">
@@ -42,7 +43,8 @@ const Card = ({ card }) => {
                 </ul>
 
                 <div className="mt-6">
-                    <button className={`btn bg-amber-100 rounded-full w-full font-bold ${true ? 'bg-linear-to-r from-purple-900 to-purple-600 text-white' : ''}`}>Buy Now</button>
+                    <button onClick={() => handleCartItems(card)}
+                        className={`btn bg-amber-100 rounded-full w-full font-bold ${true ? 'bg-linear-to-r from-purple-900 to-purple-600 text-white' : ''}`}>Buy Now</button>
                 </div>
             </div>
         </div>

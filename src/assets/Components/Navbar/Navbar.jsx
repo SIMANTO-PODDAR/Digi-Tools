@@ -1,9 +1,9 @@
 import Logo from '../../Images/digitools.png'
 import { FiShoppingCart } from 'react-icons/fi';
 
-const Navbar = () => {
+const Navbar = ({ cartItems, tabTgl }) => {
     return (
-        <div className='m-3'>
+        <div className='mt-3 sticky top-0 z-99'>
             <div className="navbar bg-base-100 shadow-sm font-bold">
                 <div className="navbar-start flex items-center">
                     <img src={Logo} alt="logo" />
@@ -18,8 +18,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <span className='flex mx-3.5 font-bold'> <FiShoppingCart /> </span>
-                    <span className='mb-8 mr-7 p-1 rounded-full bg-amber-600'>1</span>
+                    <button onClick={() => tabTgl(false)} className='btn rounded-full flex font-bold cursor-pointer'> <FiShoppingCart />
+                    </button>
+                    <span onClick={() => tabTgl(false)} className='mb-8 mr-5 p-1 rounded-full bg-amber-600'>{cartItems.length}</span>
                     <a className="mr-3">Login</a>
                     <a className="btn rounded-full text-white bg-linear-to-r from-purple-900 to-purple-600 font-bold">Get Started</a>
                 </div>

@@ -1,4 +1,4 @@
-const TogglingSection = ({ tab, tabTgl }) => {
+const TogglingSection = ({ tab, tabTgl,cartItems }) => {
     return (
         <div className='mt-30 text-center'>
             <h1 className='text-[60px] font-bold'>Premium Digital Tools</h1>
@@ -10,7 +10,7 @@ const TogglingSection = ({ tab, tabTgl }) => {
                     className={`btn bg-amber-100 rounded-full w-25 font-bold ${tab ? 'bg-linear-to-r from-purple-900 to-purple-600 text-white' : ''}`}>Products</button>
 
                 <button onClick={() => tabTgl(false)}
-                    className={`btn bg-amber-100 rounded-full w-25 font-bold ${tab ? '' : 'bg-linear-to-r from-purple-900 to-purple-600 text-white'}`}>Cart (2)</button>
+                    className={`btn bg-amber-100 rounded-full w-25 font-bold ${tab ? '' : 'bg-linear-to-r from-purple-900 to-purple-600 text-white'}`}>Cart ({cartItems.length})</button>
             </div>
         </div>
     );
