@@ -6,6 +6,7 @@ import TogglingSection from './assets/Components/TogglingSection/TogglingSection
 import Cards from './assets/Components/Cards/Cards';
 import FallbackUI from './assets/Components/Fallback/FallbackUI';
 import Cart from './assets/Components/Cart/Cart';
+import { toast } from 'react-toastify';
 
 
 //            for data
@@ -27,8 +28,16 @@ function App() {
   //            for Cart
   const [cartItems, setCartItems] = useState([])
   const handleCartItems = (nItem) => {
-    const newCartArr = [...cartItems, nItem]
-    setCartItems(newCartArr)
+
+    if (!cartItems.includes(nItem)) {
+      const newCartArr = [...cartItems, nItem]
+      setCartItems(newCartArr)
+      toast.success(`${nItem.name} Add to Cart!`)
+    }
+    else {
+      toast.warning(`${nItem.name} Already in Cart!`)
+    }
+
   }
 
 
