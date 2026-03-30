@@ -49,10 +49,11 @@ function App() {
       <TogglingSection tabTgl={tabTgl} tab={tab} cartItems={cartItems} />
 
       <Suspense fallback={<FallbackUI />}>
-        <Cards fetchPromise={fetchPromise} tab={tab} handleCartItems={handleCartItems} />
+        <Cards fetchPromise={fetchPromise} tab={tab} handleCartItems={handleCartItems}
+          cartItems={cartItems} />
       </Suspense>
 
-      <Cart tab={tab} cartItems={cartItems} />
+      <Cart tab={tab} cartItems={cartItems} setCartItems={setCartItems} />
 
     </div>
   )

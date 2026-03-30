@@ -1,7 +1,19 @@
 import { TbShoppingCartExclamation } from "react-icons/tb";
+import { toast } from "react-toastify";
 
-const Cart = ({ tab, cartItems }) => {
+const Cart = ({ tab, cartItems, setCartItems }) => {
+    const handleCheckout = () => {
+        setCartItems([])
+        toast.success('Checkout successful!')
+    }
+
+    const handleRemove = (cart) => {
+        const nCartItrms = cartItems.filter(item => item.id != cart.id)
+        setCartItems(nCartItrms)
+        toast.error(`${cart.name} Removed from cart!`)
+    }
     const total = cartItems.reduce((sum, item) => sum + item.price, 0);
+
     return (
         <div className={`border border-black/20 rounded-xl p-5 mt-5 mx-auto 
         ${tab ? 'hidden' : ''} `}>
@@ -11,7 +23,7 @@ const Cart = ({ tab, cartItems }) => {
             <div className={`${cartItems.length > 0 ? '' : 'hidden'}`}>
                 <div>
                     {
-                        cartItems.map((cart, ind) => <Item key={ind} cart={cart} />)
+                        cartItems.map((cart, ind) => <Item key={ind} cart={cart} handleRemove={handleRemove} />)
                     }
                 </div>
 
@@ -20,14 +32,14 @@ const Cart = ({ tab, cartItems }) => {
                         <h1>Total:</h1>
                         <h1 className="font-bold text-2xl">$ {total}</h1>
                     </div>
-                    <button className="btn w-full rounded-full text-white bg-linear-to-r from-purple-900 to-purple-600 font-bold">Proceed to Checkout</button>
+                    <button onClick={handleCheckout} className="btn w-full rounded-full text-white bg-linear-to-r from-purple-900 to-purple-600 font-bold">Proceed to Checkout</button>
                 </div>
             </div>
 
             <div className={`flex justify-center ${cartItems.length > 0 ? 'hidden' : ''}`}>
-                <div>
+                <div className="text-gray-500">
                     <div className="text-9xl flex justify-center"><TbShoppingCartExclamation /></div>
-                    <h1 className="font-bold text-4xl">Cart is Empty!</h1>
+                    <h1 className="font-bold text-4xl text-gray-600">Your Cart is Empty!</h1>
                 </div>
             </div>
 
@@ -36,7 +48,7 @@ const Cart = ({ tab, cartItems }) => {
 };
 
 
-const Item = ({ cart }) => {
+const Item = ({ cart, handleRemove }) => {
     return (
 
         <div className="flex justify-between p-3 mt-3 bg-gray-200 rounded-2xl">
@@ -50,7 +62,7 @@ const Item = ({ cart }) => {
                 </div>
             </div>
 
-            <button className="text-red-500 btn">Remove</button>
+            <button onClick={() => { handleRemove(cart) }} className="text-red-500 btn">Remove</button>
         </div>
 
     )

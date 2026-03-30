@@ -1,12 +1,13 @@
 import { use } from 'react';
-const Cards = ({ fetchPromise, tab, handleCartItems }) => {
+const Cards = ({ fetchPromise, tab, handleCartItems, cartItems }) => {
     const cards = use(fetchPromise);
 
     return (
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 mx-auto 
         ${tab ? '' : 'hidden'} `}>
             {
-                cards.map((card, ind) => < Card key={ind} card={card} handleCartItems={handleCartItems} />)
+                cards.map((card, ind) => < Card key={ind} card={card} handleCartItems={handleCartItems}
+                    cartItems={cartItems} />)
             }
 
         </div>
@@ -14,7 +15,9 @@ const Cards = ({ fetchPromise, tab, handleCartItems }) => {
 };
 
 
-const Card = ({ card, handleCartItems }) => {
+const Card = ({ card, handleCartItems, cartItems }) => {
+
+    const cardInCard = cartItems.includes(card);
     return (
         <div className="card w-96 bg-base-100 shadow-sm mt-3">
             <div className="card-body">
@@ -44,7 +47,12 @@ const Card = ({ card, handleCartItems }) => {
 
                 <div className="mt-6">
                     <button onClick={() => handleCartItems(card)}
-                        className={`btn bg-amber-100 rounded-full w-full font-bold ${true ? 'bg-linear-to-r from-purple-900 to-purple-600 text-white' : ''}`}>Buy Now</button>
+                        className={`btn rounded-full w-full font-bold  text-white
+                        ${cardInCard ?
+                                'bg-linear-to-r from-green-900 to-green-400' :
+                                'bg-linear-to-r from-purple-900 to-purple-600'}`}>
+
+                        {cardInCard ? 'Added to Cart!' : 'Buy Now'}</button>
                 </div>
             </div>
         </div>

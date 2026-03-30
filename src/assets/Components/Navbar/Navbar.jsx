@@ -20,7 +20,9 @@ const Navbar = ({ cartItems, tabTgl }) => {
                 <div className="navbar-end">
                     <button onClick={() => tabTgl(false)} className='btn rounded-full flex font-bold cursor-pointer'> <FiShoppingCart />
                     </button>
-                    <span onClick={() => tabTgl(false)} className='mb-8 mr-5 p-1 rounded-full bg-amber-600'>{cartItems.length}</span>
+                    <span onClick={() => tabTgl(false)}
+                        className={`${cartItems.length > 0 ? '' : 'hidden'}
+                    mb-8 mr-5 p-1 rounded-full bg-red-500`}>{cartItems.length}</span>
                     <a className="mr-3">Login</a>
                     <a className="btn rounded-full text-white bg-linear-to-r from-purple-900 to-purple-600 font-bold">Get Started</a>
                 </div>
