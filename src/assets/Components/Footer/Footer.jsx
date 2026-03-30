@@ -6,7 +6,7 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 const Footer = () => {
     return (
         <div className='bg-[#101727] text-white'>
-            <footer className="footer sm:footer-horizontal bg-[#101727] text-white p-10 mt-40">
+            <footer className="footer sm:footer-horizontal bg-[#101727] text-white p-10 max-w-400 mx-auto">
                 <aside>
 
                     <img className='w-45 h-10' src={FooterLogo} alt="FooterLogo" />
@@ -55,9 +55,9 @@ const Footer = () => {
                 </nav>
             </footer>
 
-            <div className=" bg-black/45 h-0.5"></div>
+            <div className=" bg-black/45 h-0.5 max-w-400 mx-auto"></div>
 
-            <div>
+            <div className='max-w-400 mx-auto'>
                 <div>
                     <footer className="footer sm:footer-horizontal items-center p-4 text-white/50">
                         <aside className="grid-flow-col items-center">

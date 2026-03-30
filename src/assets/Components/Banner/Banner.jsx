@@ -5,13 +5,13 @@ import { CiPlay1 } from 'react-icons/ci';
 const Banner = () => {
     return (
         <>
-            <div className='flex justify-between mt-22 p-5'>
+            <div className='flex-1 sm:flex justify-between mt-22 p-5 max-w-400 mx-auto'>
                 <div className='mt-22'>
                     <div className='btn flex items-center w-57 rounded-full gap-3 p-2 bg-purple-100 text-purple-600 text-[12px]'> <FaRegDotCircle /> New: AI-Powered Tools Available</div>
                     <h1 className='text-[80px] font-bold'>Supercharge Your <br />
                         Digital Workflow</h1>
 
-                    <p>Access premium AI tools, design assets, templates, and productivity <br />
+                    <p className="text-black/60">Access premium AI tools, design assets, templates, and productivity <br />
                         software—all in one place. Start creating faster today. <br />
                         Explore Products
                     </p>
@@ -32,8 +32,8 @@ const Banner = () => {
 
             </div>
 
-            <div className="w-full bg-linear-to-r from-purple-900 to-purple-600 py-10 text-white">
-                <div className="flex justify-around items-center text-center">
+            <div className="w-full bg-linear-to-r from-purple-900 to-purple-600 py-20 text-white mt-15">
+                <div className="flex justify-around items-center text-center max-w-400 mx-auto">
 
                     <div>
                         <h2 className="text-4xl font-bold">50K+</h2>

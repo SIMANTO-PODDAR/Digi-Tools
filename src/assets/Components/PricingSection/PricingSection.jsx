@@ -1,9 +1,9 @@
 const PricingSection = () => {
     return (
-        <div>
-            <div className='mt-30 text-center'>
+        <div className="max-w-400 mx-auto">
+            <div className='mt-35 text-center'>
                 <h1 className='text-[60px] font-bold'>Simple, Transparent Pricing</h1>
-                <p>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+                <p className="text-black/50">Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             </div>
 
 
@@ -11,9 +11,9 @@ const PricingSection = () => {
 
                 <div className="card w-96 bg-base-100 shadow-sm">
                     <div className="card-body">
-                        <div className="">
+                        <div >
                             <h2 className="text-3xl font-bold">Starter</h2>
-                            <p>Perfect for getting started</p>
+                            <p className="text-black/50">Perfect for getting started</p>
                         </div>
                         <span className="text-xl"><span className="text-2xl font-bold">$0</span><span className="text-sm text-black/50">/Month</span></span>
 
@@ -52,7 +52,7 @@ const PricingSection = () => {
                 <div className="card w-96 bg-base-100 shadow-sm bg-linear-to-r from-purple-900 to-purple-600 text-white group">
                     <div className="card-body relative">
                         <span className="badge badge-sm badge-warning absolute -top-2 ml-30 transform transition-transform duration-500 ease-in-out group-hover:scale-125">Most Popular</span>
-                        <div className="">
+                        <div >
                             <h2 className="text-3xl font-bold">Pro</h2>
                             <p>Best for professionals</p>
                         </div>
@@ -61,27 +61,27 @@ const PricingSection = () => {
                         <ul className="mt-6 flex flex-col gap-2 text-xs">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span className="" >Access to all premium tools</span>
+                                <span  >Access to all premium tools</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span className="" >Unlimited templates</span>
+                                <span  >Unlimited templates</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span className="" >Priority support</span>
+                                <span  >Priority support</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span className="" >Unlimited projects</span>
+                                <span  >Unlimited projects</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span className="" >Cloud sync</span>
+                                <span  >Cloud sync</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span className="" >Advanced analytics</span>
+                                <span  >Advanced analytics</span>
                             </li>
                         </ul>
                         <div className="mt-6">
@@ -92,9 +92,9 @@ const PricingSection = () => {
 
                 <div className="card w-96 bg-base-100 shadow-sm">
                     <div className="card-body">
-                        <div className="">
+                        <div >
                             <h2 className="text-3xl font-bold">Enterprise</h2>
-                            <p>For teams and businesses</p>
+                            <p className="text-black/50">For teams and businesses</p>
                         </div>
                         <span className="text-xl"><span className="text-2xl font-bold">$99</span><span className="text-sm text-black/50">/Month</span></span>
 
@@ -133,7 +133,6 @@ const PricingSection = () => {
             </div>
 
         </div>
-
     );
 };
 

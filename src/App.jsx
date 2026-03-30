@@ -10,6 +10,7 @@ import { toast } from 'react-toastify';
 import Steps from './assets/Components/StepsSection/Steps';
 import PricingSection from './assets/Components/PricingSection/PricingSection';
 import Footer from './assets/Components/Footer/Footer';
+import Explore from './assets/Components/Explore/Explore';
 
 
 //            for data
@@ -62,6 +63,7 @@ function App() {
 
       <PricingSection />
 
+      <Explore />
       <Footer />
 
     </div>
