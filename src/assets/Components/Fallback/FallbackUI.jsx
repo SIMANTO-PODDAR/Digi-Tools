@@ -6,4 +6,4 @@ const FallbackUI = () => {
     );
 };
 
-export default FallbackUI;
+export default FallbackUI; 

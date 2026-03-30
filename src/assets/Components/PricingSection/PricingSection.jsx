@@ -1,13 +1,13 @@
 const PricingSection = () => {
     return (
         <div className="max-w-400 mx-auto">
-            <div className='mt-35 text-center'>
-                <h1 className='text-[60px] font-bold'>Simple, Transparent Pricing</h1>
+            <div className='mt-5 md:mt-35 text-center'>
+                <h1 className='text-[30px] sm:text-[40px] md:text-[60px] font-bold'>Simple, Transparent Pricing</h1>
                 <p className="text-black/50">Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             </div>
 
 
-            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-15 mx-auto">
+            <div className="flex flex-col justify-self-center scale-80 md:scale-100 md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:mt-15 mx-auto">
 
                 <div className="card w-96 bg-base-100 shadow-sm">
                     <div className="card-body">

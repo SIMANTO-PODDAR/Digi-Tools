@@ -1,5 +1,23 @@
-# React + Vite
+# Project Name: Digi Tools
 
+# 📝 Description:
+A responsive React application showcasing premium digital tools with a shopping cart, pricing plans, and dynamic UI components. Users can browse products, add them to the cart, and checkout seamlessly.
+
+# ⚙️ Technologies Used:
+* React 18+
+* Tailwind CSS & DaisyUI
+* React Icons
+* React Toastify
+* Fetch API for data
+
+# ✨ Features:
+1) No Duplicate Cart Items – Users cannot add the same product multiple times; duplicates are automatically prevented.
+2) Responsive Pricing Section – Multiple plans with features and highlights for better UX.
+3) Tab Toggling & Suspense Loading – Switch between Products & Cart tabs with smooth fallback UI using Suspense.
+
+
+<!------------------------------------------------------------------------------------------------->
+# React + Vite
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

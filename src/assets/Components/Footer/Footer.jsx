@@ -1,5 +1,5 @@
 import { BiLogoInstagramAlt } from 'react-icons/bi';
-import FooterLogo from '../../Images/digitools-footer.png'
+import FooterLogo from '../../Images/digitools-footer.png';
 import { FaFacebookSquare } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 

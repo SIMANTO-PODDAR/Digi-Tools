@@ -1,9 +1,9 @@
 const Explore = () => {
     return (
-        <div className="mt-40 bg-linear-to-r from-purple-900 to-purple-600 py-5">
-            <div className='flex justify-center p-15 max-w-400 mx-auto'>
+        <div className="md:mt-40 bg-linear-to-r from-purple-900 to-purple-600 py-5">
+            <div className='flex justify-center p-5 md:p-15 max-w-400 mx-auto'>
                 <div>
-                    <h1 className='text-[50px] font-bold text-white'>Ready to Transform Your Workflow?</h1>
+                    <h1 className='text-[30px] sm:text-[40px] md:text-[50px] font-bold text-white'>Ready to Transform Your Workflow?</h1>
 
                     <p className="text-white/70  text-center">Join thousands of professionals who are already using Digitools to work
                         smarter. <br />

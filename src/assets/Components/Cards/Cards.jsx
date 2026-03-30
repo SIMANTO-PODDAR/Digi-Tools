@@ -1,10 +1,11 @@
 import { use } from 'react';
+import { BiCartDownload } from "react-icons/bi";
 const Cards = ({ fetchPromise, tab, handleCartItems, cartItems }) => {
     const cards = use(fetchPromise);
 
     return (
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 max-w-400 mx-auto 
-        ${tab ? '' : 'hidden'} `}>
+        <div className={` 
+        ${tab ? 'flex flex-col justify-self-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-10 mt-2 md:mt-5 max-w-400 mx-auto' : 'hidden'} `}>
             {
                 cards.map((card, ind) => < Card key={ind} card={card} handleCartItems={handleCartItems}
                     cartItems={cartItems} />)
@@ -19,7 +20,7 @@ const Card = ({ card, handleCartItems, cartItems }) => {
 
     const cardInCard = cartItems.includes(card);
     return (
-        <div className="card w-96 bg-base-100 shadow-sm mt-3 group">
+        <div className="card w-96 bg-base-100 shadow-sm mt-1 md:mt3 group scale-80 md:scale-100">
             <div className="card-body">
                 <div className='flex justify-between'>
                     <div className='p-2 bg-amber-100 rounded-full'>
@@ -56,7 +57,8 @@ const Card = ({ card, handleCartItems, cartItems }) => {
                                 'bg-linear-to-r from-green-900 to-green-400' :
                                 'bg-linear-to-r from-purple-900 to-purple-600 group-hover:scale-110'}`}>
 
-                        {cardInCard ? 'Added to Cart!' : 'Buy Now'}</button>
+                        {cardInCard ? (<> <BiCartDownload />  Added to Cart ! </>) : (<> Buy Now </>)}
+                    </button>
                 </div>
             </div>
         </div>

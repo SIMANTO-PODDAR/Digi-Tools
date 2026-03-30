@@ -1,7 +1,7 @@
 const TogglingSection = ({ tab, tabTgl, cartItems }) => {
     return (
-        <div className='mt-30 text-center max-w-400 mx-auto'>
-            <h1 className='text-[60px] font-bold'>Premium Digital Tools</h1>
+        <div className='mt-10 md:mt-30 text-center max-w-400 mx-auto'>
+            <h1 className='text-[40px] md:text-[60px] font-bold'>Premium Digital Tools</h1>
             <p className="text-black/50">Choose from our curated collection of premium digital products designed <br />
                 to boost your productivity and creativity.</p>
 

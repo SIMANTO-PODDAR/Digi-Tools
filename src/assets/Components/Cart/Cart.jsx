@@ -38,8 +38,8 @@ const Cart = ({ tab, cartItems, setCartItems }) => {
 
             <div className={`flex justify-center my-10 ${cartItems.length > 0 ? 'hidden' : ''}`}>
                 <div className="text-gray-500">
-                    <div className="text-9xl flex justify-center"><TbShoppingCartExclamation /></div>
-                    <h1 className="font-bold text-4xl text-gray-600">Your Cart is Empty!</h1>
+                    <div className="text-[30px] sm:text-[40px] md:text-9xl flex justify-center"><TbShoppingCartExclamation /></div>
+                    <h1 className="font-bold text-2xl md:text-4xl text-gray-600">Your Cart is Empty!</h1>
                 </div>
             </div>
 
