@@ -19,13 +19,17 @@ const Card = ({ card, handleCartItems, cartItems }) => {
 
     const cardInCard = cartItems.includes(card);
     return (
-        <div className="card w-96 bg-base-100 shadow-sm mt-3">
+        <div className="card w-96 bg-base-100 shadow-sm mt-3 group">
             <div className="card-body">
                 <div className='flex justify-between'>
                     <div className='p-2 bg-amber-100 rounded-full'>
                         <img src={card.icon} alt={card.tag} />
                     </div>
-                    <span className="badge badge-xs badge-warning">{card.tag}</span>
+                    <span className={`badge badge-xs badge-warning
+                        ${card.tagType == 'new' ? ' text-green-900 bg-green-200 border-0' : ''}
+                        ${card.tagType == 'popular' ? ' text-purple-900 bg-purple-100 border-0' : ''}
+                        
+                        `}>{card.tag}</span>
                 </div>
 
                 <div className="flex justify-between">
@@ -47,10 +51,10 @@ const Card = ({ card, handleCartItems, cartItems }) => {
 
                 <div className="mt-6">
                     <button onClick={() => handleCartItems(card)}
-                        className={`btn rounded-full w-full font-bold  text-white
+                        className={`btn rounded-full w-full font-bold  text-white transform transition-transform duration-500 ease-in-out
                         ${cardInCard ?
                                 'bg-linear-to-r from-green-900 to-green-400' :
-                                'bg-linear-to-r from-purple-900 to-purple-600'}`}>
+                                'bg-linear-to-r from-purple-900 to-purple-600 group-hover:scale-110'}`}>
 
                         {cardInCard ? 'Added to Cart!' : 'Buy Now'}</button>
                 </div>

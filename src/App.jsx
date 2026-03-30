@@ -7,6 +7,7 @@ import Cards from './assets/Components/Cards/Cards';
 import FallbackUI from './assets/Components/Fallback/FallbackUI';
 import Cart from './assets/Components/Cart/Cart';
 import { toast } from 'react-toastify';
+import Steps from './assets/Components/StepsSection/Steps';
 
 
 //            for data
@@ -54,6 +55,8 @@ function App() {
       </Suspense>
 
       <Cart tab={tab} cartItems={cartItems} setCartItems={setCartItems} />
+
+      <Steps />
 
     </div>
   )
