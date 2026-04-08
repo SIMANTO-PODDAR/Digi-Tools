@@ -1,34 +1,42 @@
-# Project Name: Digi Tools
+# 🛠️ Digital Tools - Professional Digital Asset Store
 
-# 📝 Description:
-A responsive React application showcasing premium digital tools with a shopping cart, pricing plans, and dynamic UI components. Users can browse products, add them to the cart, and checkout seamlessly.
+**Digital Tools** is a sleek and high-performance web application designed for users to browse, select, and purchase various digital products. Built with **React.js**, it features a smooth user experience, dynamic product filtering, and a fully functional shopping cart system.
 
-# ⚙️ Technologies Used:
-* React 18+
-* Tailwind CSS & DaisyUI
-* React Icons
-* React Toastify
-* Fetch API for data
+🔗 **Live Demo:** [https://digitools-by-simanto.netlify.app/](https://digitools-by-simanto.netlify.app/)
 
-# ✨ Features:
-1) No Duplicate Cart Items – Users cannot add the same product multiple times; duplicates are automatically prevented.
-2) Responsive Pricing Section – Multiple plans with features and highlights for better UX.
-3) Tab Toggling & Suspense Loading – Switch between Products & Cart tabs with smooth fallback UI using Suspense.
+---
 
+## 🚀 Main Features
 
-<!------------------------------------------------------------------------------------------------->
-# React + Vite
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **Dynamic Product Display:** Products with detailed features, pricing, and tags.
+- **Section Toggling:** Seamless switching between 'Products' and 'Cart' views using React state.
+- **Interactive Shopping Cart:** - Real-time cart count update in the Navbar.
+  - Add/Remove functionality for individual items.
+  - "Added to cart" visual feedback on buttons.
+- **One-Click Checkout:** A "Proceed to Checkout" button that clears the cart and updates the UI instantly.
+- **Instant Notifications:** Integrated with `React-Toastify` for real-time alerts (Add, Remove, Checkout).
+- **Responsive Design:** Optimized for Mobile, Tablet, and Desktop using Tailwind CSS and DaisyUI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Technology Stack
 
-## React Compiler
+- **Frontend:** React.js (v18+)
+- **Styling:** Tailwind CSS, DaisyUI (Component Library)
+- **State Management:** React Hooks (useState, useEffect)
+- **Notifications:** React-Toastify
+- **React Icons:** For using high-quality icons throughout the application.
+- **Deployment:** Netlify
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📦 Key Dependencies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The main libraries and tools used in this project:
+
+- **React.js (v19):** Core library for building the user interface.
+- **Vite:** Next-generation frontend tooling for fast development.
+- **Tailwind CSS (v4):** Utility-first CSS framework for rapid styling.
+- **DaisyUI (v5):** Popular Tailwind CSS component library for pre-designed UI elements.
+- **React-Toastify:** To display beautiful and functional alert notifications.
+- **React Icons:** For using high-quality icons throughout the application.
