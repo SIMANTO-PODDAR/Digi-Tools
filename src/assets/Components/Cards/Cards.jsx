@@ -1,14 +1,20 @@
 import { use } from 'react';
 import { BiCartDownload } from "react-icons/bi";
+import AIWritingPro from "/src/assets/Images/products/writing.png";
+import DesignTemplatesPack from "/src/assets/Images/products/design-tool.png";
+import PremiumStockAssets from "/src/assets/Images/products/camera.png";
+import AutomationToolkit from "/src/assets/Images/products/operation.png";
+import ResumeBuilderPro from "/src/assets/Images/products/portfolio.png";
+import SocialMediaContentKit from "/src/assets/Images/products/social-media.png";
 import { FiCheck } from "react-icons/fi";
 
 const localIcons = {
-    "AI Writing Pro": "/src/assets/Images/products/writing.png",
-    "Design Templates Pack": "/src/assets/Images/products/design-tool.png",
-    "Premium Stock Assets": "/src/assets/Images/products/camera.png",
-    "Automation Toolkit": "/src/assets/Images/products/operation.png",
-    "Resume Builder Pro": "/src/assets/Images/products/portfolio.png",
-    "Social Media Content Kit": "/src/assets/Images/products/social-media.png",
+    "AI Writing Pro": AIWritingPro,
+    "Design Templates Pack": DesignTemplatesPack,
+    "Premium Stock Assets": PremiumStockAssets,
+    "Automation Toolkit": AutomationToolkit,
+    "Resume Builder Pro": ResumeBuilderPro,
+    "Social Media Content Kit": SocialMediaContentKit,
 };
 
 const Cards = ({ fetchPromise, tab, handleCartItems, cartItems }) => {
@@ -19,11 +25,11 @@ const Cards = ({ fetchPromise, tab, handleCartItems, cartItems }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {
                     cards.map((card, ind) => (
-                        <Card 
-                            key={card.id || ind} 
-                            card={card} 
+                        <Card
+                            key={card.id || ind}
+                            card={card}
                             handleCartItems={handleCartItems}
-                            cartItems={cartItems} 
+                            cartItems={cartItems}
                         />
                     ))
                 }
@@ -52,7 +58,7 @@ const Card = ({ card, handleCartItems, cartItems }) => {
     return (
         <div className="card glass-card rounded-3xl overflow-hidden hover:-translate-y-2 hover:shadow-xl hover:shadow-indigo-500/5 dark:hover:shadow-indigo-500/10 transition-all duration-300 flex flex-col h-full border border-slate-200/50 dark:border-slate-800/40">
             <div className="p-6 sm:p-8 flex flex-col h-full space-y-6">
-                
+
                 {/* Icon & Badge Header */}
                 <div className='flex justify-between items-start'>
                     <div className='p-3 bg-indigo-50 dark:bg-slate-800 rounded-2xl flex items-center justify-center w-14 h-14 transition-colors duration-300'>
@@ -97,7 +103,7 @@ const Card = ({ card, handleCartItems, cartItems }) => {
 
                 {/* Action button */}
                 <div className="pt-2">
-                    <button 
+                    <button
                         onClick={() => handleCartItems(card)}
                         className={`w-full py-3.5 px-6 rounded-full font-bold flex items-center justify-center gap-2 border-none shadow-md transition-all duration-300 cursor-pointer text-sm
                             ${cardInCart ?
@@ -120,4 +126,4 @@ const Card = ({ card, handleCartItems, cartItems }) => {
     );
 };
 
-export default Cards;
+export default Cards;

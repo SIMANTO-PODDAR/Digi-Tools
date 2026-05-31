@@ -1,14 +1,20 @@
 import { TbShoppingCartExclamation } from "react-icons/tb";
 import { FiTrash2 } from "react-icons/fi";
+import AIWritingPro from "/src/assets/Images/products/writing.png";
+import DesignTemplatesPack from "/src/assets/Images/products/design-tool.png";
+import PremiumStockAssets from "/src/assets/Images/products/camera.png";
+import AutomationToolkit from "/src/assets/Images/products/operation.png";
+import ResumeBuilderPro from "/src/assets/Images/products/portfolio.png";
+import SocialMediaContentKit from "/src/assets/Images/products/social-media.png";
 import { toast } from "react-toastify";
 
 const localIcons = {
-    "AI Writing Pro": "/src/assets/Images/products/writing.png",
-    "Design Templates Pack": "/src/assets/Images/products/design-tool.png",
-    "Premium Stock Assets": "/src/assets/Images/products/camera.png",
-    "Automation Toolkit": "/src/assets/Images/products/operation.png",
-    "Resume Builder Pro": "/src/assets/Images/products/portfolio.png",
-    "Social Media Content Kit": "/src/assets/Images/products/social-media.png",
+    "AI Writing Pro": AIWritingPro,
+    "Design Templates Pack": DesignTemplatesPack,
+    "Premium Stock Assets": PremiumStockAssets,
+    "Automation Toolkit": AutomationToolkit,
+    "Resume Builder Pro": ResumeBuilderPro,
+    "Social Media Content Kit": SocialMediaContentKit,
 };
 
 const Cart = ({ tab, cartItems, setCartItems }) => {
@@ -22,12 +28,12 @@ const Cart = ({ tab, cartItems, setCartItems }) => {
         setCartItems(nCartItrms)
         toast.error(`${cart.name} removed from cart!`)
     }
-    
+
     const total = cartItems.reduce((sum, item) => sum + item.price, 0);
 
     return (
         <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-20 ${tab ? 'hidden' : 'block'}`}>
-            
+
             <div className="flex items-center justify-between mb-8">
                 <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Your Cart</h2>
                 {cartItems.length > 0 && (
@@ -39,15 +45,15 @@ const Cart = ({ tab, cartItems, setCartItems }) => {
 
             {cartItems.length > 0 ? (
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                    
+
                     {/* Left: Cart Items List */}
                     <div className="lg:col-span-2 space-y-4">
                         {
                             cartItems.map((cart, ind) => (
-                                <Item 
-                                    key={cart.id || ind} 
-                                    cart={cart} 
-                                    handleRemove={handleRemove} 
+                                <Item
+                                    key={cart.id || ind}
+                                    cart={cart}
+                                    handleRemove={handleRemove}
                                 />
                             ))
                         }
@@ -56,7 +62,7 @@ const Cart = ({ tab, cartItems, setCartItems }) => {
                     {/* Right: Checkout Summary */}
                     <div className="glass-card rounded-3xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-800/40 space-y-6">
                         <h3 className="text-xl font-bold text-slate-900 dark:text-white">Order Summary</h3>
-                        
+
                         <div className="space-y-4 text-sm text-slate-600 dark:text-slate-300">
                             <div className="flex justify-between">
                                 <span>Subtotal</span>
@@ -72,8 +78,8 @@ const Cart = ({ tab, cartItems, setCartItems }) => {
                             </div>
                         </div>
 
-                        <button 
-                            onClick={handleCheckout} 
+                        <button
+                            onClick={handleCheckout}
                             className="w-full py-4 px-6 rounded-full text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 font-bold border-none shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer text-sm flex items-center justify-center gap-2"
                         >
                             Proceed to Checkout
@@ -91,8 +97,8 @@ const Cart = ({ tab, cartItems, setCartItems }) => {
                     <p className="text-slate-600 dark:text-slate-300 text-sm max-w-sm mx-auto mb-8 leading-relaxed">
                         Looks like you haven't added any premium tools to your cart yet. Explore our products and supercharge your workflow.
                     </p>
-                    <button 
-                        onClick={() => window.location.href = '#products'} 
+                    <button
+                        onClick={() => window.location.href = '#products'}
                         className="py-3 px-8 rounded-full text-white bg-indigo-600 hover:bg-indigo-500 font-semibold transition-all shadow-md shadow-indigo-500/15"
                     >
                         Browse Products
@@ -120,8 +126,8 @@ const Item = ({ cart, handleRemove }) => {
                 </div>
             </div>
 
-            <button 
-                onClick={() => handleRemove(cart)} 
+            <button
+                onClick={() => handleRemove(cart)}
                 className="btn btn-ghost btn-circle text-rose-500 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30 transition-colors"
                 aria-label="Remove item"
             >
@@ -131,4 +137,4 @@ const Item = ({ cart, handleRemove }) => {
     );
 };
 
-export default Cart;
+export default Cart;
