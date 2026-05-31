@@ -4,76 +4,86 @@ import RocketImg from '../../Images/rocket.png';
 
 const Steps = () => {
     return (
-        <div className='bg-pink-50'>
-            <div className="mt:10 md:mt-30 text-center max-w-400 mx-auto md:p-10">
-                <h1 className='text-[30px] sm:text-[40px] md:text-[60px] font-bold'>Get Started in 3 Steps</h1>
-                <p className="text-black/50">Start using premium digital tools in minutes, not hours.</p>
+        <section id="features" className="bg-slate-50/60 dark:bg-slate-900/30 border-y border-slate-200/50 dark:border-slate-800/30 py-20 scroll-mt-24 transition-colors duration-300">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                {/* Section Header */}
+                <div className="text-center max-w-xl mx-auto space-y-3 mb-16">
+                    <h2 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
+                        Get Started in 3 Steps
+                    </h2>
+                    <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base">
+                        Start using premium digital tools in minutes, not hours.
+                    </p>
+                </div>
 
-                <div className="flex flex-col justify-self-center scale-80 md:scale-100 md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt:5 md:mt-20 mx-auto">
+                {/* Steps Cards Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                    <div className="card w-96 bg-base-100 shadow-sm p-3 pb-5 group">
-                        <div className='flex justify-end'>
-                            <button className='btn w-10 rounded-full text-white bg-linear-to-r from-purple-900 to-purple-600 font-bold'>01</button>
+                    {/* Step 1 */}
+                    <div className="card glass-card rounded-3xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-800/40 relative group hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300">
+                        <div className="absolute top-6 right-6">
+                            <span className="w-8 h-8 rounded-full bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-slate-700/50 flex items-center justify-center font-bold text-sm">
+                                01
+                            </span>
                         </div>
-                        <div className="card-body">
-                            <div className='flex justify-center '>
-                                <div className='p-4 bg-pink-200 w-20 rounded-full '>
-                                    <img className='transform transition-transform duration-500 ease-in-out group-hover:scale-125' src={UserImg} alt="UserImg" />
-                                </div>
+                        <div className="flex flex-col items-center text-center space-y-6 pt-4">
+                            <div className="p-4.5 bg-indigo-50/50 dark:bg-slate-800 rounded-2xl w-20 h-20 flex items-center justify-center transition-colors duration-300">
+                                <img className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-500" src={UserImg} alt="Create Account" />
                             </div>
-
-                            <div className="flex justify-center">
-                                <h2 className="text-3xl font-bold">Create Account</h2>
-                            </div>
-                            <p className="text-black/50">Sign up for free in seconds. No credit card required to get started.</p>
-                        </div>
-                    </div>
-
-                    <div className="card w-96 bg-base-100 shadow-sm p-3 pb-5 group">
-                        <div className='flex justify-end'>
-                            <button className='btn w-10 rounded-full text-white bg-linear-to-r from-purple-900 to-purple-600 font-bold'>02</button>
-                        </div>
-                        <div className="card-body">
-                            <div className='flex justify-center '>
-                                <div className='p-4 bg-pink-200 w-20 rounded-full '>
-                                    <img className='transform transition-transform duration-500 ease-in-out group-hover:scale-125' src={PackageImg} alt="PackageImg" />
-                                </div>
-                            </div>
-
-                            <div className="flex justify-center">
-                                <h2 className="text-3xl font-bold">Choose Products</h2>
-                            </div>
-                            <p className="text-black/50">Browse our catalog and select the tools
-                                that fit your needs.</p>
+                            <h3 className="text-2xl font-black text-slate-900 dark:text-white">
+                                Create Account
+                            </h3>
+                            <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                Sign up for free in seconds. No credit card required to get started.
+                            </p>
                         </div>
                     </div>
 
-                    <div className="card w-96 bg-base-100 shadow-sm group p-3 pb-5">
-                        <div className='flex justify-end'>
-                            <button className='btn w-10 rounded-full text-white bg-linear-to-r from-purple-900 to-purple-600 font-bold'>03</button>
+                    {/* Step 2 */}
+                    <div className="card glass-card rounded-3xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-800/40 relative group hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300">
+                        <div className="absolute top-6 right-6">
+                            <span className="w-8 h-8 rounded-full bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-slate-700/50 flex items-center justify-center font-bold text-sm">
+                                02
+                            </span>
                         </div>
-                        <div className="card-body">
-                            <div className='flex justify-center '>
-                                <div className='p-4 bg-pink-200 w-20 rounded-full '>
-                                    <img className='transform transition-transform duration-500 ease-in-out group-hover:scale-125' src={RocketImg} alt="RocketImg" />
-                                </div>
+                        <div className="flex flex-col items-center text-center space-y-6 pt-4">
+                            <div className="p-4.5 bg-indigo-50/50 dark:bg-slate-800 rounded-2xl w-20 h-20 flex items-center justify-center transition-colors duration-300">
+                                <img className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-500" src={PackageImg} alt="Choose Products" />
                             </div>
+                            <h3 className="text-2xl font-black text-slate-900 dark:text-white">
+                                Choose Products
+                            </h3>
+                            <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                Browse our catalog and select the premium tools that fit your needs.
+                            </p>
+                        </div>
+                    </div>
 
-                            <div className="flex justify-center">
-                                <h2 className="text-3xl font-bold">Start Creating</h2>
+                    {/* Step 3 */}
+                    <div className="card glass-card rounded-3xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-800/40 relative group hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300">
+                        <div className="absolute top-6 right-6">
+                            <span className="w-8 h-8 rounded-full bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-slate-700/50 flex items-center justify-center font-bold text-sm">
+                                03
+                            </span>
+                        </div>
+                        <div className="flex flex-col items-center text-center space-y-6 pt-4">
+                            <div className="p-4.5 bg-indigo-50/50 dark:bg-slate-800 rounded-2xl w-20 h-20 flex items-center justify-center transition-colors duration-300">
+                                <img className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-500" src={RocketImg} alt="Start Creating" />
                             </div>
-                            <p className="text-black/50">Download and start using your premium
-                                tools immediately.</p>
+                            <h3 className="text-2xl font-black text-slate-900 dark:text-white">
+                                Start Creating
+                            </h3>
+                            <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                Download and start using your premium tools immediately.
+                            </p>
                         </div>
                     </div>
 
                 </div>
-
-
-
             </div>
-        </div>
+        </section>
     );
 };
 
-export default Steps;
+export default Steps;

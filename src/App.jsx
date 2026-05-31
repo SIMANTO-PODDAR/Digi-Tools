@@ -1,4 +1,4 @@
-import { Suspense, useState } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import './App.css';
 import Banner from './assets/Components/Banner/Banner';
 import Navbar from './assets/Components/Navbar/Navbar';
@@ -29,6 +29,18 @@ function App() {
     setTab(value)
   }
 
+  //            for Theme
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light')
+  }
+
   //            for Cart
   const [cartItems, setCartItems] = useState([])
   const handleCartItems = (nItem) => {
@@ -36,7 +48,7 @@ function App() {
     if (!cartItems.includes(nItem)) {
       const newCartArr = [...cartItems, nItem]
       setCartItems(newCartArr)
-      toast.success(`${nItem.name} Add to Cart!`)
+      toast.success(`${nItem.name} Added to Cart!`)
     }
     else {
       toast.warning(`${nItem.name} Already in Cart!`)
@@ -46,8 +58,8 @@ function App() {
 
 
   return (
-    <div>
-      <Navbar cartItems={cartItems} tabTgl={tabTgl} />
+    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+      <Navbar cartItems={cartItems} tabTgl={tabTgl} theme={theme} toggleTheme={toggleTheme} />
       <Banner />
 
       <TogglingSection tabTgl={tabTgl} tab={tab} cartItems={cartItems} />
@@ -71,3 +83,4 @@ function App() {
 }
 
 export default App
+
