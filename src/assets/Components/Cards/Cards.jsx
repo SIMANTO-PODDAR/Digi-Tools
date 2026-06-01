@@ -1,21 +1,7 @@
 import { use } from 'react';
 import { BiCartDownload } from "react-icons/bi";
-import AIWritingPro from "/src/assets/Images/products/writing.png";
-import DesignTemplatesPack from "/src/assets/Images/products/design-tool.png";
-import PremiumStockAssets from "/src/assets/Images/products/camera.png";
-import AutomationToolkit from "/src/assets/Images/products/operation.png";
-import ResumeBuilderPro from "/src/assets/Images/products/portfolio.png";
-import SocialMediaContentKit from "/src/assets/Images/products/social-media.png";
 import { FiCheck } from "react-icons/fi";
 
-const localIcons = {
-    "AI Writing Pro": AIWritingPro,
-    "Design Templates Pack": DesignTemplatesPack,
-    "Premium Stock Assets": PremiumStockAssets,
-    "Automation Toolkit": AutomationToolkit,
-    "Resume Builder Pro": ResumeBuilderPro,
-    "Social Media Content Kit": SocialMediaContentKit,
-};
 
 const Cards = ({ fetchPromise, tab, handleCartItems, cartItems }) => {
     const cards = use(fetchPromise);
@@ -41,8 +27,6 @@ const Cards = ({ fetchPromise, tab, handleCartItems, cartItems }) => {
 
 const Card = ({ card, handleCartItems, cartItems }) => {
     const cardInCart = cartItems.some(item => item.id === card.id);
-    const iconSrc = localIcons[card.name] || card.icon;
-
     // Determine badge styling based on tag
     const getBadgeStyle = (tag) => {
         const lower = (tag || '').toLowerCase();
@@ -62,7 +46,7 @@ const Card = ({ card, handleCartItems, cartItems }) => {
                 {/* Icon & Badge Header */}
                 <div className='flex justify-between items-start'>
                     <div className='p-3 bg-indigo-50 dark:bg-slate-800 rounded-2xl flex items-center justify-center w-14 h-14 transition-colors duration-300'>
-                        <img src={iconSrc} alt={card.name} className="w-8 h-8 object-contain dark:brightness-110" />
+                        <img src={card.icon} alt={card.name} className="w-8 h-8 object-contain dark:brightness-110" />
                     </div>
                     <span className={`px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase ${getBadgeStyle(card.tag)}`}>
                         {card.tag}
@@ -70,7 +54,7 @@ const Card = ({ card, handleCartItems, cartItems }) => {
                 </div>
 
                 {/* Title & Desc */}
-                <div className="space-y-2 flex-grow">
+                <div className="space-y-2 grow">
                     <h3 className="text-2xl font-black text-slate-900 dark:text-white leading-tight">
                         {card.name}
                     </h3>
@@ -91,8 +75,8 @@ const Card = ({ card, handleCartItems, cartItems }) => {
                         {
                             card.features.map((feature, ind) => (
                                 <li className="flex items-center text-slate-700 dark:text-slate-300 text-sm" key={ind}>
-                                    <span className="flex-shrink-0 mr-2.5 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400">
-                                        <FiCheck size={12} className="stroke-[3]" />
+                                    <span className="shrink-0 mr-2.5 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400">
+                                        <FiCheck size={12} className="stroke-3" />
                                     </span>
                                     <span>{feature}</span>
                                 </li>
@@ -107,8 +91,8 @@ const Card = ({ card, handleCartItems, cartItems }) => {
                         onClick={() => handleCartItems(card)}
                         className={`w-full py-3.5 px-6 rounded-full font-bold flex items-center justify-center gap-2 border-none shadow-md transition-all duration-300 cursor-pointer text-sm
                             ${cardInCart ?
-                                'bg-gradient-to-r from-emerald-600 to-teal-500 text-white shadow-emerald-500/10 cursor-default' :
-                                'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-500 hover:to-purple-500 shadow-indigo-500/10 hover:shadow-indigo-500/20 active:scale-[0.98]'}`}
+                                'bg-linear-to-r from-emerald-600 to-teal-500 text-white shadow-emerald-500/10 cursor-default' :
+                                'bg-linear-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-500 hover:to-purple-500 shadow-indigo-500/10 hover:shadow-indigo-500/20 active:scale-[0.98]'}`}
                     >
                         {cardInCart ? (
                             <>

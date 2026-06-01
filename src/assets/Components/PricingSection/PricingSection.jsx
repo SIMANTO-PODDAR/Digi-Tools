@@ -3,7 +3,7 @@ import { FiCheck } from "react-icons/fi";
 const PricingSection = () => {
     return (
         <section id="pricing" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-24">
-            
+
             {/* Section Header */}
             <div className='text-center max-w-xl mx-auto space-y-3 mb-16'>
                 <h2 className='text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight'>
@@ -31,19 +31,19 @@ const PricingSection = () => {
 
                         <ul className="space-y-4 pt-6 border-t border-slate-100 dark:border-slate-800/40">
                             <li className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Access to 10 free tools</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Basic templates</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Community support</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>1 project per month</span>
                             </li>
                         </ul>
@@ -74,27 +74,27 @@ const PricingSection = () => {
 
                         <ul className="space-y-4 pt-6 border-t border-slate-800">
                             <li className="flex items-center text-sm text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-indigo-500/20 text-indigo-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-indigo-500/20 text-indigo-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Access to all premium tools</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-indigo-500/20 text-indigo-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-indigo-500/20 text-indigo-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Unlimited templates</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-indigo-500/20 text-indigo-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-indigo-500/20 text-indigo-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Priority support</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-indigo-500/20 text-indigo-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-indigo-500/20 text-indigo-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Unlimited projects</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-indigo-500/20 text-indigo-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-indigo-500/20 text-indigo-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Cloud sync & backups</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-indigo-500/20 text-indigo-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-indigo-500/20 text-indigo-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Advanced analytics</span>
                             </li>
                         </ul>
@@ -120,27 +120,27 @@ const PricingSection = () => {
 
                         <ul className="space-y-4 pt-6 border-t border-slate-100 dark:border-slate-800/40">
                             <li className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Everything in Pro</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Team collaboration tools</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Custom integrations</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Dedicated accounts support</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-450"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-450"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>SLA guarantee</span>
                             </li>
                             <li className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-[3]" /></span>
+                                <span className="mr-3 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400"><FiCheck size={12} className="stroke-3" /></span>
                                 <span>Custom branding</span>
                             </li>
                         </ul>
@@ -158,4 +158,4 @@ const PricingSection = () => {
     );
 };
 
-export default PricingSection;
+export default PricingSection;

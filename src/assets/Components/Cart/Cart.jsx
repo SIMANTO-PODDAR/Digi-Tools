@@ -1,21 +1,7 @@
 import { TbShoppingCartExclamation } from "react-icons/tb";
 import { FiTrash2 } from "react-icons/fi";
-import AIWritingPro from "/src/assets/Images/products/writing.png";
-import DesignTemplatesPack from "/src/assets/Images/products/design-tool.png";
-import PremiumStockAssets from "/src/assets/Images/products/camera.png";
-import AutomationToolkit from "/src/assets/Images/products/operation.png";
-import ResumeBuilderPro from "/src/assets/Images/products/portfolio.png";
-import SocialMediaContentKit from "/src/assets/Images/products/social-media.png";
 import { toast } from "react-toastify";
 
-const localIcons = {
-    "AI Writing Pro": AIWritingPro,
-    "Design Templates Pack": DesignTemplatesPack,
-    "Premium Stock Assets": PremiumStockAssets,
-    "Automation Toolkit": AutomationToolkit,
-    "Resume Builder Pro": ResumeBuilderPro,
-    "Social Media Content Kit": SocialMediaContentKit,
-};
 
 const Cart = ({ tab, cartItems, setCartItems }) => {
     const handleCheckout = () => {
@@ -80,7 +66,7 @@ const Cart = ({ tab, cartItems, setCartItems }) => {
 
                         <button
                             onClick={handleCheckout}
-                            className="w-full py-4 px-6 rounded-full text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 font-bold border-none shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer text-sm flex items-center justify-center gap-2"
+                            className="w-full py-4 px-6 rounded-full text-white bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 font-bold border-none shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer text-sm flex items-center justify-center gap-2"
                         >
                             Proceed to Checkout
                         </button>
@@ -112,13 +98,12 @@ const Cart = ({ tab, cartItems, setCartItems }) => {
 
 
 const Item = ({ cart, handleRemove }) => {
-    const iconSrc = localIcons[cart.name] || cart.icon;
 
     return (
         <div className="flex items-center justify-between p-4 bg-white dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800/40 hover:border-slate-200 dark:hover:border-slate-800/80 rounded-2xl transition-all duration-200 group">
             <div className="flex items-center gap-4">
                 <div className='p-2.5 bg-slate-50 dark:bg-slate-800 rounded-xl flex items-center justify-center w-12 h-12'>
-                    <img src={iconSrc} alt={cart.name} className="w-8 h-8 object-contain dark:brightness-110" />
+                    <img src={cart.icon} alt={cart.name} className="w-8 h-8 object-contain dark:brightness-110" />
                 </div>
                 <div>
                     <h4 className='font-bold text-slate-950 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors'>{cart.name}</h4>

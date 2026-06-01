@@ -1,7 +1,7 @@
 const Explore = () => {
     return (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-24 transition-colors duration-300">
-            <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 text-white shadow-2xl shadow-indigo-500/10 dark:shadow-indigo-900/15">
+            <div className="relative overflow-hidden rounded-[2.5rem] bg-linear-to-tr from-indigo-600 via-purple-600 to-pink-500 text-white shadow-2xl shadow-indigo-500/10 dark:shadow-indigo-900/15">
                 
                 {/* Visual accents */}
                 <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-2xl transform translate-x-20 -translate-y-20 pointer-events-none"></div>
@@ -41,4 +41,4 @@ const Explore = () => {
     );
 };
 
-export default Explore;
+export default Explore;

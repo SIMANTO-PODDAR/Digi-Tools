@@ -50,7 +50,7 @@ const Navbar = ({ cartItems, tabTgl, theme, toggleTheme }) => {
                     {/* Mid Links */}
                     <div className="hidden md:flex">
                         <ul className="flex items-center gap-8 font-semibold text-slate-600 dark:text-slate-300">
-                            <li><a href="#" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Products</a></li>
+                            <li><a href="#products" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Products</a></li>
                             <li><a href="#features" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Features</a></li>
                             <li><a href="#pricing" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Pricing</a></li>
                             <li><a href="#testimonials" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Testimonials</a></li>
@@ -85,7 +85,7 @@ const Navbar = ({ cartItems, tabTgl, theme, toggleTheme }) => {
                         <a href="#" className="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold px-3 py-2 transition-colors">
                             Login
                         </a>
-                        <a href="#" className="btn rounded-full px-6 text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 border-none shadow-md hover:shadow-indigo-500/20 hover:scale-105 active:scale-95 transition-all font-bold">
+                        <a href="#" className="btn rounded-full px-6 text-white bg-linear-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 border-none shadow-md hover:shadow-indigo-500/20 hover:scale-105 active:scale-95 transition-all font-bold">
                             Get Started
                         </a>
                     </div>
@@ -95,4 +95,4 @@ const Navbar = ({ cartItems, tabTgl, theme, toggleTheme }) => {
     );
 };
 
-export default Navbar;
+export default Navbar;

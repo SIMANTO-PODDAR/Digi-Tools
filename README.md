@@ -1,95 +1,164 @@
-# 🛠️ DigiTools - Professional Digital Asset Store
+# 🚀 Digitools — Premium Digital Tools Marketplace
 
-**DigiTools** is a sleek and high-performance web application designed for users to browse, select, and purchase various digital products. Built with **React.js**, it features a smooth user experience, dynamic product filtering, and a fully functional shopping cart system.
-
-🔗 **Live Demo:** [https://digitools-by-simanto.netlify.app/](https://digitools-by-simanto.netlify.app/)
+A modern, premium single-page web application built with **React 19** and **Vite**, showcasing a curated catalog of digital tools. Features a stunning glassmorphism UI, a fully functional cart system, and smooth micro-animations throughout.
 
 ---
 
-## 🚀 Main Features
+## 📸 Preview
 
-- **Dynamic Product Display:** Products with detailed features, pricing, and tags.
-- **Section Toggling:** Seamless switching between 'Products' and 'Cart' views using React state.
-- **Interactive Shopping Cart:** - Real-time cart count update in the Navbar.
-  - Add/Remove functionality for individual items.
-  - "Added to cart" visual feedback on buttons.
-- **One-Click Checkout:** A "Proceed to Checkout" button that clears the cart and updates the UI instantly.
-- **Instant Notifications:** Integrated with `React-Toastify` for real-time alerts (Add, Remove, Checkout).
-- **Responsive Design:** Optimized for Mobile, Tablet, and Desktop using Tailwind CSS and DaisyUI.
+> **Live at:** [https://digitools-by-simanto.netlify.app](https://digitools-by-simanto.netlify.app)
 
----
+The app features:
 
-## 🛠️ Technology Stack
-
-- **Frontend:** React.js (v18+)
-- **Styling:** Tailwind CSS, DaisyUI (Component Library)
-- **State Management:** React Hooks (useState, useEffect)
-- **Notifications:** React-Toastify
-- **React Icons:** For using high-quality icons throughout the application.
-- **Deployment:** Netlify
+- A hero banner with animated floating graphic and live social statistics
+- A products catalog with filterable tool cards
+- A shopping cart with order summary and checkout
+- A 3-step onboarding section
+- A tiered pricing section with an animated featured Pro card
+- A call-to-action (CTA) section
+- A full dark-themed footer with newsletter subscription
 
 ---
 
-## 📦 Key Dependencies
+## 🛠️ Tech Stack
 
-The main libraries and tools used in this project:
-
-- **React.js (v19):** Core library for building the user interface.
-- **Vite:** Next-generation frontend tooling for fast development.
-- **Tailwind CSS (v4):** Utility-first CSS framework for rapid styling.
-- **DaisyUI (v5):** Popular Tailwind CSS component library for pre-designed UI elements.
-- **React-Toastify:** To display beautiful and functional alert notifications.
-- **React Icons:** For using high-quality icons throughout the application.
+| Category        | Technology                                   |
+|-----------------|----------------------------------------------|
+| Framework       | [React 19](https://react.dev/)               |
+| Build Tool      | [Vite 8](https://vitejs.dev/)                |
+| Styling         | [Tailwind CSS v4](https://tailwindcss.com/)  |
+| UI Components   | [DaisyUI v5](https://daisyui.com/)           |
+| Icons           | [React Icons v5](https://react-icons.github.io/react-icons/) |
+| Notifications   | [React Toastify v11](https://fkhadra.github.io/react-toastify/) |
 
 ---
 
-## 💻 Local Installation & Setup
+## 🧩 Components Overview
 
-Follow these simple steps to get the project up and running on your local machine:
+### `Navbar`
 
-### 1. Clone the Repository
+- Sticky top, glassmorphism background
+- Logo, navigation links (Products, Features, Pricing, Testimonials, FAQ)
+- Shopping cart button with animated item count badge
+- Login + "Get Started" CTA button
+- Fully responsive — collapses gracefully on mobile
 
-First, download the project files by cloning the repository:
+### `Banner`
+
+- Full hero with gradient headline: *"Supercharge Your Digital Workflow"*
+- Animated floating product image with glow effect
+- CTA buttons: **Explore Products** & **Watch Demo**
+- Stats strip: **50K+ Active Users**, **200+ Premium Tools**, **4.9 User Rating**
+
+### `Cards` *(React Suspense)*
+
+- Fetches product data from `/data.json` using React 19's `use()` hook
+- Renders a responsive 3-column grid of product cards
+- Each card shows: icon, badge (New / Popular / Sale), name, description, price/period, features list, and **Buy Now** button
+- "Added to Cart" state changes button to green with a cart icon
+
+### `Cart`
+
+- Displays when the Cart tab is active
+- Lists all added items with product icon, name, price, and a remove button
+- **Order Summary** sidebar: subtotal, taxes, and total
+- **Checkout** button clears cart and shows a success toast
+- Empty cart state with illustrated placeholder and "Browse Products" link
+
+### `StepsSection`
+
+- Three-step onboarding: **Create Account → Choose Products → Start Creating**
+- Glass cards with step numbers, icon images, and hover lift animation
+
+### `PricingSection`
+
+- **Starter** ($0/mo), **Pro** ($29/mo — featured), **Enterprise** ($99/mo)
+- Pro card uses an animated gradient glowing border (`glow-border` class)
+- Each card lists included features with emerald checkmarks
+
+### `Explore` *(CTA Section)*
+
+- Full-width gradient banner (indigo → purple → pink)
+- Call-to-action: **Explore Products** and **View Pricing** buttons
+- "14-day free trial • No credit card required • Cancel anytime"
+
+### `Footer`
+
+- Dark background with brand logo, description, and social links
+- Navigation columns: **Product** and **Company**
+- Newsletter subscription form with email input and toast confirmation
+- Copyright and legal links (Privacy Policy, Terms, Cookies)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) v18 or later
+- npm v9 or later
+
+### Installation
 
 ```bash
+# 1. Clone the repository
 git clone https://github.com/SIMANTO-PODDAR/Digi-Tools.git
-```
+cd Digi-Tools
 
-*Then, move into the project directory:*
-
-```bash
-cd digi-tools
-```
-
-### 2. Install Dependencies
-
-This project uses several libraries (like React, Tailwind, and DaisyUI). To install all of them at once, run:
-
-```bash
+# 2. Install dependencies
 npm install
-```
 
-### 3. Run the Development Server
-
-Once the installation is complete, start the project with:
-
-```bash
+# 3. Start the development server
 npm run dev
 ```
 
-### 4. Open in Browser
+The app will be available at **<http://localhost:5173>**
 
-After running the command above, you will see a local link in your terminal (usually `http://localhost:5173`). Click the link or copy-paste it into your browser to view the live project!
+### Available Scripts
 
----
-
-### ⚙️ Prerequisites
-
-To run this project, make sure you have the following installed on your computer:
-- **Node.js** (Latest LTS version recommended)
-- **npm** (Comes automatically with Node.js)
-- A code editor like **VS Code**
+| Command         | Description                              |
+|-----------------|------------------------------------------|
+| `npm run dev`   | Start Vite dev server with HMR           |
+| `npm run build` | Build for production (outputs to `dist/`)|
+| `npm run preview` | Preview the production build locally  |
+| `npm run lint`  | Run ESLint across the project            |
 
 ---
 
-**Tip:** If you encounter any issues during `npm install`, try clearing your cache or ensuring your Node.js version is up to date (React 19 requires Node 18 or higher).
+## 📦 Product Data
+
+Product cards are loaded from `public/data.json`. Each product object follows this shape:
+
+```json
+{
+  "id": 1,
+  "name": "AI Writing Pro",
+  "description": "...",
+  "price": 19,
+  "period": "month",
+  "tag": "Popular",
+  "features": ["Feature A", "Feature B", "..."]
+}
+```
+
+To add or modify products, edit `public/data.json`. Icons are matched by name using the `localIcons` map in `Cards.jsx` and `Cart.jsx`.
+
+---
+
+## 📋 Key Features Summary
+
+- ✅ React 19 with `use()` hook for data fetching inside `Suspense`
+- ✅ Glassmorphism UI (navbar + cards)
+- ✅ Shopping cart with add, remove, and checkout
+- ✅ Toast notifications for all user actions
+- ✅ Responsive layout (mobile-first)
+- ✅ Smooth micro-animations and hover effects
+- ✅ Animated gradient border on featured pricing card
+- ✅ Newsletter subscription form in footer
+
+---
+
+## 👤 Author
+
+**Simanto Poddar**  
+GitHub: [@SIMANTO-PODDAR](https://github.com/SIMANTO-PODDAR)

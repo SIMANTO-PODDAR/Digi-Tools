@@ -8,7 +8,7 @@ const Banner = () => {
             
             {/* Ambient background glows */}
             <div className="absolute top-1/4 left-1/10 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute top-1/3 right-1/10 w-[500px] h-[500px] bg-purple-500/10 dark:bg-purple-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute top-1/3 right-1/10 w-125 h-125 bg-purple-500/10 dark:bg-purple-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className='flex flex-col-reverse lg:flex-row items-center justify-between gap-12'>
@@ -25,7 +25,7 @@ const Banner = () => {
                         {/* Title with Gradient */}
                         <h1 className='text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-slate-900 dark:text-white'>
                             Supercharge Your <br />
-                            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
+                            <span className="bg-linear-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
                                 Digital Workflow
                             </span>
                         </h1>
@@ -39,7 +39,7 @@ const Banner = () => {
                         <div className='flex flex-wrap justify-center lg:justify-start gap-4 pt-2'>
                             <a 
                                 href="#products" 
-                                className="btn rounded-full px-8 py-3 text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 border-none shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-105 active:scale-95 transition-all font-bold"
+                                className="btn rounded-full px-8 py-3 text-white bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 border-none shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-105 active:scale-95 transition-all font-bold"
                             >
                                 Explore Products
                             </a>
@@ -57,7 +57,7 @@ const Banner = () => {
                     <div className='flex-1 flex justify-center lg:justify-end w-full max-w-md lg:max-w-none'>
                         <div className='relative w-full max-w-lg animate-float-slow'>
                             {/* Glow element behind image */}
-                            <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 rounded-3xl blur-2xl transform rotate-3"></div>
+                            <div className="absolute inset-0 bg-linear-to-tr from-indigo-500/20 to-purple-500/20 rounded-3xl blur-2xl transform rotate-3"></div>
                             
                             <img 
                                 src={BannerImg} 
@@ -76,17 +76,17 @@ const Banner = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
                         
                         <div className="p-4 transition-transform hover:scale-105">
-                            <h2 className="text-5xl font-black bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">50K+</h2>
+                            <h2 className="text-5xl font-black bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">50K+</h2>
                             <p className="mt-2 text-sm font-semibold text-slate-500 dark:text-slate-400 tracking-wide uppercase">Active Users</p>
                         </div>
 
                         <div className="p-4 border-y sm:border-y-0 sm:border-x border-slate-200/60 dark:border-slate-800/60 transition-transform hover:scale-105">
-                            <h2 className="text-5xl font-black bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">200+</h2>
+                            <h2 className="text-5xl font-black bg-linear-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">200+</h2>
                             <p className="mt-2 text-sm font-semibold text-slate-500 dark:text-slate-400 tracking-wide uppercase">Premium Tools</p>
                         </div>
 
                         <div className="p-4 transition-transform hover:scale-105">
-                            <h2 className="text-5xl font-black bg-gradient-to-r from-pink-500 to-indigo-600 bg-clip-text text-transparent">4.9</h2>
+                            <h2 className="text-5xl font-black bg-linear-to-r from-pink-500 to-indigo-600 bg-clip-text text-transparent">4.9</h2>
                             <p className="mt-2 text-sm font-semibold text-slate-500 dark:text-slate-400 tracking-wide uppercase">User Rating</p>
                         </div>
 
@@ -97,4 +97,4 @@ const Banner = () => {
     );
 };
 
-export default Banner;
+export default Banner;

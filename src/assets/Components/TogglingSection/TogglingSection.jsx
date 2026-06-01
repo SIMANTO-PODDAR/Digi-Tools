@@ -8,7 +8,7 @@ const TogglingSection = ({ tab, tabTgl, cartItems }) => {
                 Choose from our curated collection of premium digital products designed to boost your productivity and creativity.
             </p>
 
-            <div className='mt-8 bg-slate-100 dark:bg-slate-900/60 p-1 flex items-center justify-center mx-auto rounded-full w-[280px] border border-slate-200/50 dark:border-slate-800/40 transition-colors duration-300'>
+            <div className='mt-8 bg-slate-100 dark:bg-slate-900/60 p-1 flex items-center justify-center mx-auto rounded-full w-70 border border-slate-200/50 dark:border-slate-800/40 transition-colors duration-300'>
                 <button 
                     onClick={() => tabTgl(true)}
                     className={`rounded-full py-2.5 px-6 text-sm font-bold transition-all duration-200 cursor-pointer w-1/2 flex items-center justify-center gap-1.5 ${tab ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm' : 'text-slate-600 hover:text-slate-800 dark:hover:text-slate-200'}`}
@@ -30,4 +30,4 @@ const TogglingSection = ({ tab, tabTgl, cartItems }) => {
     );
 }; 
 
-export default TogglingSection;
+export default TogglingSection;
